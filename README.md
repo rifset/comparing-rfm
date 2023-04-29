@@ -222,11 +222,11 @@ Note there is no strict rule on segment name ruling and most likely to be custom
 
 #### The K-Means Clustering Method
 
-In this method, the classes will be obtained from the k-means clustering results. To ensure that the determined number of classes (k=4) is good, I checked the Within Sum of Square (WSS aka Elbow method) and Silhouette value.
+In this method, the classes will be obtained from the k-means clustering results. To ensure that the determined number of classes ($k=4$) is good, I checked the Within Sum of Square (WSS aka Elbow method) and Silhouette value.
 
 ![kmeans-cluster-size.png](asset/kmeans-cluster-size.png)
 
-Based on the above plot, as the number on which the elbow point and the highest Sil value are shown, the number of classes (k=4) suggests a good result.
+Based on the above plot, as the number on which the elbow point and the highest Sil value are shown, the number of classes ($k=4$) suggests a good result.
 
 The clustering results are then labeled using the prepared segment name, ordered by the average monetary value of each cluster.
 
