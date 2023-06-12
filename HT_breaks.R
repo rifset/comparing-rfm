@@ -1,4 +1,4 @@
-library(tidyr)
+library(tidyverse)
 
 HT_breaks <- function(x, k) {
   if (k > 1) {
@@ -11,8 +11,8 @@ HT_breaks <- function(x, k) {
       if (length(x0[[(i+1)]]) <= 2) break
     }
     xbid <- c(min(x), unlist(xm0), max(x))
-    xsize <- sapply(x0, length) - replace_na(lead(sapply(x0, length)), 0)
-    xmem <- as.numeric(cut(x,  breaks = xbid, label = c(1:length(xsize)), include.lowest = TRUE))
+    xmem <- as.integer(cut(x,  breaks = xbid, label = c(1:k), include.lowest = TRUE))
+    xsize <- as.integer(table(xmem))
     return(
       list(
         bin = xbid,
